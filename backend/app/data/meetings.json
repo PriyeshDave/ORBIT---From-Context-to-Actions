@@ -1,0 +1,344 @@
+{
+  "meetings": [
+    {
+      "id": "mtg-aida-onboarding-20260729",
+      "title": "AiDa Model Store Onboarding Sync",
+      "organizer": "priyesh.dave",
+      "date": "2026-07-29",
+      "start_time": "10:00",
+      "end_time": "10:30",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "lumi",
+        "aida",
+        "model store",
+        "onboarding",
+        "training",
+        "deployment"
+      ],
+      "eligible_attendees": [
+        "priyesh.dave",
+        "parth.joshi",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-colleague360-dq-20260729",
+      "title": "Colleague 360 Data Quality Review",
+      "organizer": "isha.dave",
+      "date": "2026-07-29",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Confidential",
+      "keywords": [
+        "colleague360",
+        "data quality",
+        "grew",
+        "ingestion",
+        "dashboard"
+      ],
+      "eligible_attendees": [
+        "isha.dave",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-1js-feedback-20260730",
+      "title": "1JS & Sussex House Feedback Session",
+      "organizer": "hina.elton",
+      "date": "2026-07-30",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "1js",
+        "sussex house",
+        "ux research",
+        "work notes",
+        "feedback",
+        "incident"
+      ],
+      "eligible_attendees": [
+        "hina.elton",
+        "priyesh.dave",
+        "matthew.salomons"
+      ]
+    },
+    {
+      "id": "mtg-contextform-review-20260730",
+      "title": "Context Form UX Review",
+      "organizer": "hina.elton",
+      "date": "2026-07-30",
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "context form",
+        "ux",
+        "sentiment",
+        "bu onboarding",
+        "usability"
+      ],
+      "eligible_attendees": [
+        "hina.elton",
+        "priyesh.dave"
+      ]
+    },
+    {
+      "id": "mtg-mrmg-incident-20260731",
+      "title": "MRMG Governance Review - Incident Data Management",
+      "organizer": "matthew.salomons",
+      "date": "2026-07-31",
+      "start_time": "10:00",
+      "end_time": "10:30",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Confidential",
+      "keywords": [
+        "mrmg",
+        "governance",
+        "incident",
+        "e3",
+        "rollout",
+        "approval"
+      ],
+      "eligible_attendees": [
+        "matthew.salomons",
+        "priyesh.dave",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-tmrc-sentiment-20260731",
+      "title": "TMRC Governance Review - Sentiment Analytics",
+      "organizer": "matthew.salomons",
+      "date": "2026-07-31",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Confidential",
+      "keywords": [
+        "tmrc",
+        "governance",
+        "sentiment",
+        "e3",
+        "context form",
+        "approval"
+      ],
+      "eligible_attendees": [
+        "matthew.salomons",
+        "parth.joshi"
+      ]
+    },
+    {
+      "id": "mtg-sprint-planning-20260731",
+      "title": "Sprint Planning - Digital Workplace Pod",
+      "organizer": "matthew.salomons",
+      "date": "2026-07-31",
+      "start_time": "16:00",
+      "end_time": "16:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "sprint planning",
+        "backlog",
+        "incident",
+        "sentiment",
+        "grew",
+        "capacity"
+      ],
+      "eligible_attendees": [
+        "priyesh.dave",
+        "parth.joshi",
+        "isha.dave",
+        "hina.elton",
+        "matthew.salomons",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-standup-20260801",
+      "title": "Daily Standup",
+      "organizer": "matthew.salomons",
+      "date": "2026-08-01",
+      "start_time": "09:30",
+      "end_time": "09:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "standup",
+        "daily",
+        "sync",
+        "priorities",
+        "blockers",
+        "incident",
+        "sentiment",
+        "grew"
+      ],
+      "eligible_attendees": [
+        "priyesh.dave",
+        "parth.joshi",
+        "isha.dave",
+        "hina.elton",
+        "matthew.salomons",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-incidents-20260801",
+      "title": "Incident Data Management - Weekly Sync",
+      "organizer": "matthew.salomons",
+      "date": "2026-08-01",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "servicenow",
+        "incident",
+        "worknotes",
+        "jnai",
+        "categorization",
+        "enrichment",
+        "mrmg",
+        "elastic",
+        "nexthink",
+        "e2",
+        "e3",
+        "asset data",
+        "kafka",
+        "reliability"
+      ],
+      "eligible_attendees": [
+        "priyesh.dave",
+        "parth.joshi",
+        "matthew.salomons",
+        "hina.elton",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-sentiment-20260801",
+      "title": "Sentiment Analytics - Weekly Sync",
+      "organizer": "parth.joshi",
+      "date": "2026-08-01",
+      "start_time": "13:00",
+      "end_time": "13:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "sentiment",
+        "nlp",
+        "survey",
+        "chatgpt rollout",
+        "mrmg",
+        "tmrc",
+        "shap",
+        "clustering",
+        "governance",
+        "bu onboarding",
+        "ces",
+        "context form",
+        "dashboard"
+      ],
+      "eligible_attendees": [
+        "priyesh.dave",
+        "parth.joshi",
+        "matthew.salomons",
+        "hina.elton",
+        "isha.dave"
+      ]
+    },
+    {
+      "id": "mtg-grew-20260801",
+      "title": "GREW Analytics - Weekly Sync",
+      "organizer": "isha.dave",
+      "date": "2026-08-01",
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Confidential",
+      "keywords": [
+        "grew",
+        "grivy",
+        "colleague360",
+        "launchpad",
+        "floor planning",
+        "attendance",
+        "badge",
+        "access approval",
+        "powerbi",
+        "dashboard",
+        "ingestion"
+      ],
+      "eligible_attendees": [
+        "isha.dave",
+        "hina.elton",
+        "matthew.salomons",
+        "nishant.kumar"
+      ]
+    },
+    {
+      "id": "mtg-grew-readout-20260801",
+      "title": "GREW Leadership Readout",
+      "organizer": "matthew.salomons",
+      "date": "2026-08-01",
+      "start_time": "16:30",
+      "end_time": "17:00",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Confidential",
+      "keywords": [
+        "grew",
+        "leadership",
+        "readout",
+        "dashboard",
+        "floor planning",
+        "attendance"
+      ],
+      "eligible_attendees": [
+        "isha.dave",
+        "matthew.salomons",
+        "hina.elton"
+      ]
+    },
+    {
+      "id": "mtg-sre-ops-20260801",
+      "title": "SRE Reliability Review - Weekly Ops Sync",
+      "organizer": "nishant.kumar",
+      "date": "2026-08-01",
+      "start_time": "17:15",
+      "end_time": "17:45",
+      "timezone": "Asia/Kolkata",
+      "platform": "Microsoft Teams",
+      "sensitivity_label": "Internal",
+      "keywords": [
+        "sre",
+        "reliability",
+        "incident",
+        "kafka",
+        "monitoring",
+        "on-call",
+        "rod alert"
+      ],
+      "eligible_attendees": [
+        "nishant.kumar",
+        "priyesh.dave"
+      ]
+    }
+  ]
+}

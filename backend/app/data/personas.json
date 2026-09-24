@@ -1,0 +1,84 @@
+{
+  "personas": [
+    {
+      "id": "priyesh.dave",
+      "name": "Priyesh Dave",
+      "role": "Senior AI Engineer I - Digital Workplace",
+      "email": "priyesh.dave@amex.demo",
+      "avatar_color": "#006FCF",
+      "password": "Orbit@2026",
+      "connected_tools": [
+        "outlook",
+        "teams",
+        "slack",
+        "tracker"
+      ]
+    },
+    {
+      "id": "matthew.salomons",
+      "name": "Matthew Salomons",
+      "role": "Mgr Digital Product Mgmt - Corporate & B2B Product Mgmt",
+      "email": "matthew.salomons@amex.demo",
+      "avatar_color": "#00175A",
+      "password": "Orbit@2026",
+      "connected_tools": [
+        "outlook",
+        "teams",
+        "slack",
+        "tracker"
+      ]
+    },
+    {
+      "id": "hina.elton",
+      "name": "Hina Elton",
+      "role": "Senior UX Researcher - Enterprise Design & Research",
+      "email": "hina.elton@amex.demo",
+      "avatar_color": "#5A2D82",
+      "password": "Orbit@2026",
+      "connected_tools": [
+        "outlook",
+        "teams",
+        "tracker"
+      ]
+    },
+    {
+      "id": "isha.dave",
+      "name": "Isha Dave",
+      "role": "Analyst - Data Analytics - Global Complaints & Privacy",
+      "email": "isha.dave@amex.demo",
+      "avatar_color": "#8A6D3B",
+      "password": "Orbit@2026",
+      "connected_tools": [
+        "outlook",
+        "tracker"
+      ],
+      "note": "Teams and Slack are not connected for this persona - demonstrates per-connector authorization."
+    },
+    {
+      "id": "nishant.kumar",
+      "name": "Nishant Kumar",
+      "role": "Site Reliability Engineer II - Core Technologies",
+      "email": "nishant.kumar@amex.demo",
+      "avatar_color": "#B31942",
+      "password": "Orbit@2026",
+      "connected_tools": [
+        "outlook",
+        "slack",
+        "tracker"
+      ]
+    },
+    {
+      "id": "parth.joshi",
+      "name": "Parth Joshi",
+      "role": "AI Engineer II - Digital Workplace",
+      "email": "parth.joshi@amex.demo",
+      "avatar_color": "#0074B7",
+      "password": "Orbit@2026",
+      "connected_tools": [
+        "outlook",
+        "slack",
+        "tracker"
+      ]
+    }
+  ]
+}

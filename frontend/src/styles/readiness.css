@@ -1,0 +1,58 @@
+/*
+  Readiness-capability-specific design tokens, layered on top of theme.css.
+  All custom properties are --rd- prefixed to avoid colliding with the
+  shared app-wide tokens in theme.css (both files target :root). The base
+  resets (*, html/body/#root, body{...}) are deliberately NOT duplicated
+  here - those come only from theme.css so they apply consistently across
+  the whole app, not just these pages.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --rd-bg: #ffffff;
+  --rd-bg-subtle: #f7f8fa;
+  --rd-bg-panel: #fbfbfc;
+  --rd-border: #e6e8ec;
+  --rd-border-strong: #d3d7de;
+  --rd-ink: #12141a;
+  --rd-ink-soft: #565c6b;
+  --rd-ink-faint: #8a90a0;
+
+  --rd-accent: #4f46e5;
+  --rd-accent-soft: #eef0fe;
+  --rd-accent-ink: #372fc4;
+
+  /* Agent identity colors - mirrors the Coordinator/Research/Risk/Planning/
+     Communication roster, used consistently across chat + flow page. */
+  --rd-coordinator: #06b6d4;
+  --rd-coordinator-soft: #e3f9fc;
+  --rd-research: #3b82f6;
+  --rd-research-soft: #eaf1ff;
+  --rd-risk: #f43f5e;
+  --rd-risk-soft: #fdeaee;
+  --rd-planning: #10b981;
+  --rd-planning-soft: #e6f8f1;
+  --rd-communication: #8b5cf6;
+  --rd-communication-soft: #f1ebfe;
+
+  --rd-success: #10b981;
+  --rd-warning: #f59e0b;
+  --rd-danger: #f43f5e;
+
+  --rd-radius-sm: 8px;
+  --rd-radius-md: 12px;
+  --rd-radius-lg: 18px;
+
+  --rd-font-display: "Space Grotesk", "Inter", sans-serif;
+  --rd-font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --rd-font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Scoped utility used only by the Readiness pages' scrollable panes. */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--rd-border-strong);
+  border-radius: 999px;
+}

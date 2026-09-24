@@ -1,0 +1,120 @@
+/*
+  Design tokens for Flight Deck - shared visual language across all three
+  capabilities (Catch Up, Planner, Readiness) so the app reads as one
+  coherent product. White-background, Copilot-inspired workspace, styled with
+  American Express brand colors (Amex Blue primary, Amex Navy secondary).
+  The Readiness capability layers its own additional stylesheet
+  (readiness.css) on top of this for its agent-identity colors, since that
+  capability's chat/flow pages have a deliberately distinct visual flavor.
+*/
+
+:root {
+  /* Surfaces */
+  --surface-canvas: #ffffff;
+  --surface-subtle: #faf9f8;
+  --surface-card: #ffffff;
+  --surface-sunken: #f3f2f1;
+  --surface-hover: #f5f5f5;
+
+  /* Borders - default border gets a faint Amex-blue tint so the whole
+     app reads as "blue-and-white" rather than neutral gray-and-white;
+     border-accent is a stronger blue border for headers/hero elements */
+  --border-default: #dce8f5;
+  --border-strong: #b8d3ea;
+  --border-accent: #cfe4f7;
+
+  /* Text */
+  --text-primary: #201f1e;
+  --text-secondary: #605e5c;
+  --text-tertiary: #8a8886;
+  --text-on-accent: #ffffff;
+
+  /* Brand / accent - American Express palette: Amex Blue as primary,
+     Amex Navy as secondary/nav accent */
+  --accent-primary: #006fcf;
+  --accent-primary-hover: #00559e;
+  --accent-primary-tint: #e6f2fc;
+  --accent-secondary: #00175a;
+
+  /* Semantic */
+  --success: #107c10;
+  --success-tint: #e6f4e6;
+  --warning: #c19c00;
+  --warning-tint: #fff4ce;
+  --danger: #c4314b;
+  --danger-tint: #fde7ea;
+  --info-tint: #eef6fc;
+
+  /* Pipeline step accent colors (Catch Up) */
+  --step-read-notes: #0f6cbd;
+  --step-decisions: #8764b8;
+  --step-actions: #ca5010;
+  --step-risks: #c4314b;
+  --step-priorities: #107c10;
+  --step-followup: #5c2e91;
+
+  /* Connector colors (Planner) */
+  --tool-outlook: #0f6cbd;
+  --tool-teams: #5b5fc7;
+  --tool-slack: #ecb22e;
+  --tool-tracker: #ca5010;
+
+  /* Urgency colors (Planner) */
+  --urgency-critical: #c4314b;
+  --urgency-high: #ca5010;
+  --urgency-medium: #c19c00;
+  --urgency-low: #107c10;
+
+  /* Typography */
+  --font-body: "Segoe UI", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Radius / elevation */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Layout */
+  --nav-width: 72px;
+  --chat-rail-width: 340px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--accent-primary);
+}
+
+::selection {
+  background: var(--accent-primary-tint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

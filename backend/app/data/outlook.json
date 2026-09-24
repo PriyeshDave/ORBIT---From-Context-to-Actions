@@ -1,0 +1,286 @@
+{
+  "priyesh.dave": {
+    "calendar_events": [
+      {
+        "id": "cal-1",
+        "title": "Daily Standup",
+        "start": "2026-08-03T09:30:00+05:30",
+        "end": "2026-08-03T09:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-2",
+        "title": "MRMG Governance Review - Incident Data Management",
+        "start": "2026-08-03T11:30:00+05:30",
+        "end": "2026-08-03T12:00:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-3",
+        "title": "Sentiment Analytics - Leadership Readout (Matthew presenting)",
+        "start": "2026-08-03T14:00:00+05:30",
+        "end": "2026-08-03T14:45:00+05:30",
+        "location": "Conference Room 3B"
+      },
+      {
+        "id": "cal-4",
+        "title": "Context form review with Hina",
+        "start": "2026-08-03T16:00:00+05:30",
+        "end": "2026-08-03T16:15:00+05:30",
+        "location": "Teams call"
+      }
+    ],
+    "flagged_emails": [
+      {
+        "id": "mail-1",
+        "from": "Matthew Salomons",
+        "subject": "MRMG approval came through - let's lock the E3 rollout date",
+        "body": "Production MRMG sign-off for Incident Data Management just came through. Can you confirm a date this week to plan the E3 rollout?",
+        "received_at": "2026-08-03T08:15:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T12:10:00+05:30"
+      },
+      {
+        "id": "mail-2",
+        "from": "Parth Joshi",
+        "subject": "Still need the SHAP plots for the MRMG doc",
+        "body": "Following up from Friday - I can't close out the Sentiment Analytics MRMG documentation without the SHAP plots. Can you send them today?",
+        "received_at": "2026-08-03T08:20:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T13:05:00+05:30"
+      },
+      {
+        "id": "mail-3",
+        "from": "ServiceNow Platform Admin",
+        "subject": "Work note formatting change - needs your review before it goes live",
+        "body": "The formatting fix for the enriched work notes is staged - can you do a final review before we push it live in ServiceNow?",
+        "received_at": "2026-08-03T08:30:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T15:20:00+05:30"
+      },
+      {
+        "id": "mail-4",
+        "from": "American Express - Digital Workplace Newsletter",
+        "subject": "This month in Digital Workplace: town hall recap",
+        "body": "Catch up on last month's town hall highlights and upcoming roadmap sessions.",
+        "received_at": "2026-08-02T18:00:00+05:30",
+        "requires_action": false,
+        "resolved_at": null
+      },
+      {
+        "id": "mail-5",
+        "from": "Facilities",
+        "subject": "Cafeteria renovation - temporary seating this week",
+        "body": "The ground floor cafeteria is under renovation this week; temporary seating is available on floor 2.",
+        "received_at": "2026-08-02T16:00:00+05:30",
+        "requires_action": false,
+        "resolved_at": null
+      }
+    ]
+  },
+  "parth.joshi": {
+    "calendar_events": [
+      {
+        "id": "cal-p1",
+        "title": "Daily Standup",
+        "start": "2026-08-03T09:30:00+05:30",
+        "end": "2026-08-03T09:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-p2",
+        "title": "MRMG documentation review with Priyesh",
+        "start": "2026-08-03T13:00:00+05:30",
+        "end": "2026-08-03T13:15:00+05:30",
+        "location": "Teams call"
+      }
+    ],
+    "flagged_emails": [
+      {
+        "id": "mail-p1",
+        "from": "Priyesh Dave",
+        "subject": "Sending SHAP plots shortly",
+        "body": "Pulling the SHAP plots together now, will send before our sync - should give you enough time to close out the MRMG doc today.",
+        "received_at": "2026-08-03T08:35:00+05:30",
+        "requires_action": true,
+        "resolved_at": null
+      }
+    ]
+  },
+  "isha.dave": {
+    "calendar_events": [
+      {
+        "id": "cal-i1",
+        "title": "Daily Standup",
+        "start": "2026-08-03T09:30:00+05:30",
+        "end": "2026-08-03T09:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-i2",
+        "title": "GREW Analytics sync prep",
+        "start": "2026-08-03T14:30:00+05:30",
+        "end": "2026-08-03T15:00:00+05:30",
+        "location": "Teams call"
+      }
+    ],
+    "flagged_emails": [
+      {
+        "id": "mail-i1",
+        "from": "Nishant Kumar",
+        "subject": "GREW ingestion pipeline patch going in today",
+        "body": "Patching the schema mismatch on the GREW ingestion job today - dashboard refresh may lag by a few hours while it validates.",
+        "received_at": "2026-08-03T08:45:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T09:30:00+05:30"
+      }
+    ]
+  },
+  "hina.elton": {
+    "calendar_events": [
+      {
+        "id": "cal-h1",
+        "title": "Daily Standup",
+        "start": "2026-08-03T09:30:00+05:30",
+        "end": "2026-08-03T09:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-h2",
+        "title": "Incident Data Management sync (UX findings)",
+        "start": "2026-08-03T11:00:00+05:30",
+        "end": "2026-08-03T11:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-h3",
+        "title": "Sentiment context form usability testing",
+        "start": "2026-08-03T13:30:00+05:30",
+        "end": "2026-08-03T14:15:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-h4",
+        "title": "GREW visualization walkthrough prep",
+        "start": "2026-08-03T15:30:00+05:30",
+        "end": "2026-08-03T16:00:00+05:30",
+        "location": "Teams call"
+      }
+    ],
+    "flagged_emails": [
+      {
+        "id": "mail-h1",
+        "from": "Matthew Salomons",
+        "subject": "Can you share the 1JS/Sussex House UX findings before the incident sync?",
+        "body": "Want to make sure the confidence-score finding is ready to present at 11 so we can get it into the backlog today.",
+        "received_at": "2026-08-03T08:25:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T10:50:00+05:30"
+      }
+    ]
+  },
+  "matthew.salomons": {
+    "calendar_events": [
+      {
+        "id": "cal-m1",
+        "title": "Daily Standup",
+        "start": "2026-08-03T09:30:00+05:30",
+        "end": "2026-08-03T09:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-m2",
+        "title": "Incident Data Management - Weekly Sync",
+        "start": "2026-08-03T11:00:00+05:30",
+        "end": "2026-08-03T11:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-m3",
+        "title": "Sentiment Analytics - Weekly Sync",
+        "start": "2026-08-03T13:00:00+05:30",
+        "end": "2026-08-03T13:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-m4",
+        "title": "Sentiment Analytics Leadership Readout (presenting)",
+        "start": "2026-08-03T14:00:00+05:30",
+        "end": "2026-08-03T14:45:00+05:30",
+        "location": "Conference Room 3B"
+      },
+      {
+        "id": "cal-m5",
+        "title": "GREW Analytics - Weekly Sync",
+        "start": "2026-08-03T15:00:00+05:30",
+        "end": "2026-08-03T15:45:00+05:30",
+        "location": "Teams call"
+      }
+    ],
+    "flagged_emails": [
+      {
+        "id": "mail-m1",
+        "from": "TMRC Governance Office",
+        "subject": "Sentiment Analytics context form still pending",
+        "body": "We can't finalize the E3 deployment approval for the Sentiment Analytics framework until the BU onboarding context form is submitted for review. Please share an ETA.",
+        "received_at": "2026-08-03T08:10:00+05:30",
+        "requires_action": true,
+        "resolved_at": null
+      },
+      {
+        "id": "mail-m2",
+        "from": "MRMG Governance Office",
+        "subject": "Incident Data Management - production approval complete",
+        "body": "Final review complete - production MRMG approval for Incident Data Management is granted. You're clear to plan the E3 rollout.",
+        "received_at": "2026-08-03T08:05:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T09:15:00+05:30"
+      },
+      {
+        "id": "mail-m3",
+        "from": "IT Security",
+        "subject": "Launch-pad access request under review",
+        "body": "The launch-pad access request for the GREW data pull is under review - expect a decision by end of week.",
+        "received_at": "2026-08-02T17:30:00+05:30",
+        "requires_action": true,
+        "resolved_at": null
+      }
+    ]
+  },
+  "nishant.kumar": {
+    "calendar_events": [
+      {
+        "id": "cal-n1",
+        "title": "Daily Standup",
+        "start": "2026-08-03T09:30:00+05:30",
+        "end": "2026-08-03T09:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-n2",
+        "title": "Incident Data Management - Weekly Sync",
+        "start": "2026-08-03T11:00:00+05:30",
+        "end": "2026-08-03T11:45:00+05:30",
+        "location": "Teams call"
+      },
+      {
+        "id": "cal-n3",
+        "title": "GREW Analytics - Weekly Sync",
+        "start": "2026-08-03T15:00:00+05:30",
+        "end": "2026-08-03T15:45:00+05:30",
+        "location": "Teams call"
+      }
+    ],
+    "flagged_emails": [
+      {
+        "id": "mail-n1",
+        "from": "Data Engineering",
+        "subject": "RE: Asset data backfill request (Incident enrichment)",
+        "body": "Acknowledging the backfill request for the missing asset data - estimated 2 weeks to complete given current backlog.",
+        "received_at": "2026-08-02T19:00:00+05:30",
+        "requires_action": true,
+        "resolved_at": "2026-08-03T09:00:00+05:30"
+      }
+    ]
+  }
+}

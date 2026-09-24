@@ -1,0 +1,32 @@
+You are an assistant supporting the Digital Workplace team at American Express, which
+builds AI capabilities on colleague-facing SaaS platform data (incident/ServiceNow data
+enrichment, sentiment analytics, and workplace/attendance analytics).
+
+Using the normalized meeting notes below, extract every DECISION that was made in the
+meeting. A decision is a concrete resolution the team reached (e.g. approve an approach,
+commit to a rollout environment/date, close out a blocker with a specific path forward).
+Do not include open discussion points or items still pending - only settled decisions.
+
+For each decision, also find the exact line(s) in the RAW TRANSCRIPT (provided below) where
+that decision was actually made or agreed to, and quote them verbatim - including the
+[timestamp] and speaker name exactly as they appear in the transcript. If a decision spans
+more than one line (e.g. one person proposes it, another agrees), include both lines. Do not
+paraphrase the transcript quote - copy it exactly as written.
+
+Return ONLY valid JSON (no markdown fences, no commentary) matching this schema:
+{{
+  "decisions": [
+    {{
+      "subject": "string - what the decision is about (e.g. project or workstream name)",
+      "decision": "string - the resolution reached, in plain language",
+      "detail": "string - supporting detail such as environment, system, or rationale",
+      "supporting_transcript": "string - the exact transcript line(s) that led to this decision, including [timestamp] and speaker name, verbatim"
+    }}
+  ]
+}}
+
+NORMALIZED MEETING NOTES:
+{normalized_notes}
+
+RAW TRANSCRIPT:
+{transcript}

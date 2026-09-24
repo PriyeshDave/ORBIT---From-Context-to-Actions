@@ -1,0 +1,437 @@
+{
+  "mtg-aida-onboarding-20260729": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "10:00",
+        "speaker": "Priyesh Dave",
+        "text": "Let's walk through the AiDa onboarding. Once the categorization model finishes training on Lumi, I'll upload it to the AiDa model store so it's versioned and discoverable."
+      },
+      {
+        "time": "10:04",
+        "speaker": "Nishant Kumar",
+        "text": "From an ops side, does AiDa give us the same monitoring hooks we have today, or do I need to wire up separate alerting once it's registered there?"
+      },
+      {
+        "time": "10:07",
+        "speaker": "Priyesh Dave",
+        "text": "Same hooks, AiDa just wraps the registry - your existing latency and error-rate alerts should carry over once we point them at the new model URI."
+      },
+      {
+        "time": "10:11",
+        "speaker": "Parth Joshi",
+        "text": "Will I need Lumi access too? I'd like to poke around the sentiment clustering runs there."
+      },
+      {
+        "time": "10:13",
+        "speaker": "Priyesh Dave",
+        "text": "Yes - I'll raise an IIQ on your behalf for Lumi access, should go through in a day or two."
+      },
+      {
+        "time": "10:16",
+        "speaker": "Nishant Kumar",
+        "text": "Appreciated. Once that's in, loop me in if you need help wiring the AiDa deployment pipeline."
+      }
+    ]
+  },
+  "mtg-colleague360-dq-20260729": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "14:00",
+        "speaker": "Isha Dave",
+        "text": "Wanted to review data quality on Colleague 360 before I build further on the GREW dashboards. A few fields are coming through null on the floor-planning feed."
+      },
+      {
+        "time": "14:04",
+        "speaker": "Nishant Kumar",
+        "text": "That tracks with a schema drift I flagged last week on one of the source feeds - I don't think it's been patched yet on our side."
+      },
+      {
+        "time": "14:08",
+        "speaker": "Isha Dave",
+        "text": "Okay, I'll hold off on the floor-planning visuals until that's fixed so the dashboard doesn't show misleading gaps."
+      },
+      {
+        "time": "14:12",
+        "speaker": "Nishant Kumar",
+        "text": "Fair. I'll prioritize the ingestion patch this week and ping you the moment it's validated."
+      },
+      {
+        "time": "14:15",
+        "speaker": "Isha Dave",
+        "text": "Thanks - attendance data itself looks clean though, I can keep building that half of the dashboard in the meantime."
+      }
+    ]
+  },
+  "mtg-1js-feedback-20260730": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "11:00",
+        "speaker": "Hina Elton",
+        "text": "I ran contextual inquiry sessions with engineers in both 1JS and Sussex House this week. Strong, consistent feedback: they want the categorization confidence score visible in the work note, not just the predicted category."
+      },
+      {
+        "time": "11:06",
+        "speaker": "Priyesh Dave",
+        "text": "That's a small schema change on our end - the RAG service already computes a confidence score internally, we're just not surfacing it. Should be quick to add."
+      },
+      {
+        "time": "11:10",
+        "speaker": "Matthew Salomons",
+        "text": "Good, I'll add that to the backlog as a near-term enhancement rather than a full sprint item, given how contained it is."
+      },
+      {
+        "time": "11:14",
+        "speaker": "Hina Elton",
+        "text": "One more finding - a couple of engineers said the work note formatting is sometimes hard to scan on mobile ServiceNow. Worth a follow-up study, not urgent."
+      },
+      {
+        "time": "11:18",
+        "speaker": "Priyesh Dave",
+        "text": "Noted, let's revisit that once the confidence-score change ships so we're not touching the format twice."
+      },
+      {
+        "time": "11:21",
+        "speaker": "Matthew Salomons",
+        "text": "Agreed. Hina, can you write up the confidence-score finding formally so I can reference it when I talk to MRMG?"
+      },
+      {
+        "time": "11:24",
+        "speaker": "Hina Elton",
+        "text": "Will do, I'll have it over by end of day."
+      }
+    ]
+  },
+  "mtg-contextform-review-20260730": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "15:00",
+        "speaker": "Hina Elton",
+        "text": "Let's review the BU onboarding context form. I ran usability testing with two BU stakeholders on the draft."
+      },
+      {
+        "time": "15:03",
+        "speaker": "Priyesh Dave",
+        "text": "How did it go? I built it fairly technical since it maps directly to the framework's config schema."
+      },
+      {
+        "time": "15:06",
+        "speaker": "Hina Elton",
+        "text": "Mostly positive, but both stakeholders got tripped up on the field ordering - they expect scope questions before technical config questions."
+      },
+      {
+        "time": "15:10",
+        "speaker": "Priyesh Dave",
+        "text": "That's an easy reorder, the underlying fields don't change. I can have that done today."
+      },
+      {
+        "time": "15:13",
+        "speaker": "Hina Elton",
+        "text": "Perfect. Once that's in I'd like one more quick round before we hand it to TMRC for review."
+      },
+      {
+        "time": "15:16",
+        "speaker": "Priyesh Dave",
+        "text": "Agreed, let's target tomorrow for the re-test."
+      }
+    ]
+  },
+  "mtg-mrmg-incident-20260731": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "10:00",
+        "speaker": "Matthew Salomons",
+        "text": "Since Priyesh is out today, I'll cover the Incident Data Management status for MRMG. Categorization and enrichment services are both stable in production."
+      },
+      {
+        "time": "10:04",
+        "speaker": "Nishant Kumar",
+        "text": "From a reliability side, we did have a Kafka consumer lag spike earlier this week, resolved within the hour. I've since added tighter alerting so we catch it faster next time."
+      },
+      {
+        "time": "10:09",
+        "speaker": "Matthew Salomons",
+        "text": "Good. The one open item MRMG keeps circling back to is the missing asset-data gap in Elastic - that's still with Data Engineering, no firm ETA yet."
+      },
+      {
+        "time": "10:13",
+        "speaker": "Nishant Kumar",
+        "text": "I'll keep monitoring on our side so if that data does show up mid-flight, it doesn't break the enrichment pipeline silently."
+      },
+      {
+        "time": "10:17",
+        "speaker": "Matthew Salomons",
+        "text": "Appreciated. I think we're in good shape for MRMG production sign-off this cycle - I'll lock the E3 rollout date once he's back and we've confirmed timing."
+      }
+    ]
+  },
+  "mtg-tmrc-sentiment-20260731": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "14:00",
+        "speaker": "Matthew Salomons",
+        "text": "Parth's heads-down on the MRMG documentation today, so I'll walk TMRC through where Sentiment Analytics stands."
+      },
+      {
+        "time": "14:04",
+        "speaker": "Matthew Salomons",
+        "text": "Framework's piloted end-to-end on the ChatGPT rollout survey, results have been positive. The main open item TMRC wants closed before E3 sign-off is the BU onboarding context form."
+      },
+      {
+        "time": "14:09",
+        "speaker": "Matthew Salomons",
+        "text": "That's actively being refined - UX ran a round of testing this week and a revised version should be ready in the next day or two."
+      },
+      {
+        "time": "14:13",
+        "speaker": "Matthew Salomons",
+        "text": "I'll follow up on the clustering re-run results once they're documented, so we have the full picture before the next TMRC check-in."
+      }
+    ]
+  },
+  "mtg-sprint-planning-20260731": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "16:00",
+        "speaker": "Matthew Salomons",
+        "text": "Priyesh and Nishant are both out for the rest of today, so let's plan around their open items rather than wait. Hina, want to start with the UX-driven backlog additions?"
+      },
+      {
+        "time": "16:03",
+        "speaker": "Hina Elton",
+        "text": "Sure - the categorization confidence-score enhancement from the 1JS feedback session, and the context form field reorder, which should already be done by the time Priyesh is back."
+      },
+      {
+        "time": "16:07",
+        "speaker": "Parth Joshi",
+        "text": "On Sentiment, the MRMG documentation is close to done - just waiting on SHAP plots. Once I have those I can close it out."
+      },
+      {
+        "time": "16:11",
+        "speaker": "Isha Dave",
+        "text": "For GREW, I'm blocked on a data quality issue in Colleague 360 until the ingestion pipeline gets patched - that's with Nishant, so I'll pick it back up once he's confirmed the fix."
+      },
+      {
+        "time": "16:15",
+        "speaker": "Matthew Salomons",
+        "text": "Got it, I'll flag that as a carry-over item for Nishant. Anything else blocking before we close out?"
+      },
+      {
+        "time": "16:18",
+        "speaker": "Hina Elton",
+        "text": "Nothing from me - I'll have the GREW floor-planning mockups ready for the leadership readout tomorrow."
+      },
+      {
+        "time": "16:21",
+        "speaker": "Matthew Salomons",
+        "text": "Good, let's plan next sprint capacity assuming the asset-data gap and the ingestion patch are still open going into next week."
+      }
+    ]
+  },
+  "mtg-standup-20260801": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "09:30",
+        "speaker": "Matthew Salomons",
+        "text": "Morning all - Priyesh is still out, back Monday. Quick round robin, flag anything blocking."
+      },
+      {
+        "time": "09:31",
+        "speaker": "Nishant Kumar",
+        "text": "Kafka consumer lag alert fired again this morning on the enrichment service, investigating now. Also patching the GREW ingestion schema mismatch today."
+      },
+      {
+        "time": "09:33",
+        "speaker": "Parth Joshi",
+        "text": "Sentiment clustering re-run looks clean. Still need Priyesh's SHAP plots to close out the MRMG documentation."
+      },
+      {
+        "time": "09:34",
+        "speaker": "Isha Dave",
+        "text": "GREW PowerBI dashboard refresh is done through E2 data, holding on the floor-planning visuals until Nishant's ingestion fix lands. Also finishing the Sentiment survey dashboard for today's readout."
+      },
+      {
+        "time": "09:36",
+        "speaker": "Hina Elton",
+        "text": "Context form reorder is in and ready for its second usability round. Floor-planning mockups for GREW are ready to walk through this afternoon."
+      },
+      {
+        "time": "09:37",
+        "speaker": "Matthew Salomons",
+        "text": "Good. Let's keep incident sync at 11, sentiment at 1, GREW at 3, and the leadership readout right after."
+      }
+    ]
+  },
+  "mtg-incidents-20260801": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "11:00",
+        "speaker": "Matthew Salomons",
+        "text": "Let's do the Incident Data Management sync. Priyesh is still out, so I'll keep this focused on what's actionable without him."
+      },
+      {
+        "time": "11:03",
+        "speaker": "Nishant Kumar",
+        "text": "Kafka consumer lag spiked again for about 20 minutes this morning, cleared on its own but I've got tighter alerting in place now. Categorization and enrichment services are otherwise stable."
+      },
+      {
+        "time": "11:08",
+        "speaker": "Hina Elton",
+        "text": "Quick update from my side - the confidence-score enhancement from the 1JS feedback is written up and in the backlog. Priyesh mentioned it's a small schema change, so should be quick once he's back."
+      },
+      {
+        "time": "11:12",
+        "speaker": "Matthew Salomons",
+        "text": "Good. The asset-data gap is still sitting with Data Engineering, no ETA yet - I'll chase that again this week."
+      },
+      {
+        "time": "11:16",
+        "speaker": "Parth Joshi",
+        "text": "I can help backfill some of the Nexthink test cases in the meantime if that's useful while Priyesh is out."
+      },
+      {
+        "time": "11:19",
+        "speaker": "Matthew Salomons",
+        "text": "That would help. I'll lock the E3 rollout date once he's back - MRMG sign-off looks solid."
+      }
+    ]
+  },
+  "mtg-sentiment-20260801": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "13:00",
+        "speaker": "Parth Joshi",
+        "text": "Let's cover Sentiment Analytics. I re-triggered the clustering run and redefined the clusters, much cleaner groupings now."
+      },
+      {
+        "time": "13:04",
+        "speaker": "Parth Joshi",
+        "text": "Still blocked on the SHAP plots for the MRMG documentation - Priyesh usually generates those, so that'll wait until he's back Monday."
+      },
+      {
+        "time": "13:08",
+        "speaker": "Hina Elton",
+        "text": "The context form's second usability round is scheduled - field reorder is already in from Priyesh's fix yesterday."
+      },
+      {
+        "time": "13:12",
+        "speaker": "Isha Dave",
+        "text": "I'm finishing the pilot survey results dashboard now, sentiment trends by BU. Should be ready before the 2pm readout."
+      },
+      {
+        "time": "13:16",
+        "speaker": "Matthew Salomons",
+        "text": "I covered TMRC yesterday in Priyesh's absence - they're still waiting on the finalized context form before they'll sign off on E3 deployment."
+      },
+      {
+        "time": "13:20",
+        "speaker": "Parth Joshi",
+        "text": "Once I have the SHAP plots I can close the MRMG doc within a day or two - just need Priyesh back for that piece."
+      }
+    ]
+  },
+  "mtg-grew-20260801": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "15:00",
+        "speaker": "Isha Dave",
+        "text": "For GREW, the PowerBI dashboard is refreshed through E2 - attendance views are live, floor-planning is on hold until ingestion is fixed."
+      },
+      {
+        "time": "15:04",
+        "speaker": "Nishant Kumar",
+        "text": "Patch for the schema mismatch is going in today, should unblock the floor-planning data by end of day."
+      },
+      {
+        "time": "15:08",
+        "speaker": "Hina Elton",
+        "text": "I've got the floor-planning visualization mockups ready to walk through with leadership right after this. Also flagging again - this touches colleague attendance data, worth a compliance and privacy review before we go beyond pilot."
+      },
+      {
+        "time": "15:12",
+        "speaker": "Matthew Salomons",
+        "text": "Agreed, I'll get that formally logged as an action. I'll also chase IT on the launch-pad access request status this week."
+      },
+      {
+        "time": "15:16",
+        "speaker": "Isha Dave",
+        "text": "Once ingestion is stable I can validate the dashboards against real data instead of the sample set."
+      },
+      {
+        "time": "15:20",
+        "speaker": "Nishant Kumar",
+        "text": "I'll have the fix verified by end of day and add monitoring so we catch schema drift earlier next time."
+      }
+    ]
+  },
+  "mtg-grew-readout-20260801": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "16:30",
+        "speaker": "Matthew Salomons",
+        "text": "Isha's out for the rest of today, so I'll walk through the GREW dashboard progress on her behalf using what she shared this morning."
+      },
+      {
+        "time": "16:33",
+        "speaker": "Hina Elton",
+        "text": "I'll cover the floor-planning visualization mockups - happy to answer questions on the UX side directly."
+      },
+      {
+        "time": "16:37",
+        "speaker": "Matthew Salomons",
+        "text": "Attendance dashboards are live through E2 data. Floor-planning was blocked on an ingestion schema issue, which Nishant's patch should resolve by end of day."
+      },
+      {
+        "time": "16:41",
+        "speaker": "Hina Elton",
+        "text": "Leadership seemed positive on the mockups, main ask was to make sure the privacy review happens before wider rollout, which is already logged as an action."
+      },
+      {
+        "time": "16:45",
+        "speaker": "Matthew Salomons",
+        "text": "Good. I'll write up leadership's feedback so she can incorporate it into the next dashboard iteration when she's back."
+      }
+    ]
+  },
+  "mtg-sre-ops-20260801": {
+    "source": "Microsoft Teams",
+    "segments": [
+      {
+        "time": "17:15",
+        "speaker": "Nishant Kumar",
+        "text": "Weekly ops review - since Priyesh is out, I'll cover the reliability side solo and loop him in on anything relevant when he's back."
+      },
+      {
+        "time": "17:18",
+        "speaker": "Nishant Kumar",
+        "text": "Kafka consumer lag on the enrichment service is trending better since I tightened alerting - caught this morning's spike within minutes instead of losing 20+."
+      },
+      {
+        "time": "17:22",
+        "speaker": "Nishant Kumar",
+        "text": "GREW ingestion schema mismatch is patched and validated. Two open items heading into next week: a ROD alert on enrichment service availability dropping to 95%, and the Risk_Bus_Oblgr table not refreshing on schedule."
+      },
+      {
+        "time": "17:27",
+        "speaker": "Nishant Kumar",
+        "text": "I'll also flag a service ID certificate that's nearing expiry - want to get that renewed well before it becomes an incident."
+      },
+      {
+        "time": "17:30",
+        "speaker": "Nishant Kumar",
+        "text": "Nothing here needs Priyesh urgently, but I'll document the availability drop findings in case it's related to the categorization service load, for him to review when he's back."
+      }
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "priyesh.dave": {
+    "tickets": [
+      {
+        "id": "DW-482",
+        "title": "Generate SHAP plots for Sentiment Analytics MRMG documentation",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "critical",
+        "resolved_at": "2026-08-03T13:05:00+05:30"
+      },
+      {
+        "id": "DW-479",
+        "title": "Final review of ServiceNow work note formatting fix before go-live",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "high",
+        "resolved_at": "2026-08-03T15:20:00+05:30"
+      },
+      {
+        "id": "DW-465",
+        "title": "Build BU onboarding context form for Sentiment Analytics framework",
+        "due_at": "2026-08-04T09:00:00+05:30",
+        "priority": "high",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-470",
+        "title": "Raise Data Engineering request for missing asset data (Incident enrichment blocker)",
+        "due_at": "2026-08-07T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-590",
+        "title": "Train categorization model on Lumi and upload to AiDa model store",
+        "due_at": "2026-08-03T18:00:00+05:30",
+        "priority": "critical",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-591",
+        "title": "Raise IIQ for Parth's Lumi access",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "high",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-592",
+        "title": "Raise Emergency RFC - Incident enrichment service hotfix needed today",
+        "due_at": "2026-08-03T15:00:00+05:30",
+        "priority": "critical",
+        "resolved_at": null
+      }
+    ]
+  },
+  "parth.joshi": {
+    "tickets": [
+      {
+        "id": "DW-501",
+        "title": "Complete MRMG documentation for Sentiment Analytics",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "high",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-495",
+        "title": "Help backfill Nexthink test cases for Incident Data Management",
+        "due_at": "2026-08-04T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      }
+    ]
+  },
+  "isha.dave": {
+    "tickets": [
+      {
+        "id": "DW-540",
+        "title": "Refresh GREW PowerBI dashboard (attendance & floor-planning)",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "high",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-545",
+        "title": "Build Incident Data Management enrichment-accuracy dashboard",
+        "due_at": "2026-08-07T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-548",
+        "title": "Build Sentiment Analytics survey results dashboard for leadership readout",
+        "due_at": "2026-08-03T13:30:00+05:30",
+        "priority": "high",
+        "resolved_at": "2026-08-03T09:10:00+05:30"
+      }
+    ]
+  },
+  "hina.elton": {
+    "tickets": [
+      {
+        "id": "DW-560",
+        "title": "Conduct usability testing on BU onboarding context form",
+        "due_at": "2026-08-03T14:15:00+05:30",
+        "priority": "high",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-561",
+        "title": "Finalize GREW floor-planning visualization mockups",
+        "due_at": "2026-08-04T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-562",
+        "title": "Share 1JS/Sussex House UX research findings on work note format",
+        "due_at": "2026-08-03T11:00:00+05:30",
+        "priority": "high",
+        "resolved_at": "2026-08-03T10:50:00+05:30"
+      }
+    ]
+  },
+  "matthew.salomons": {
+    "tickets": [
+      {
+        "id": "DW-450",
+        "title": "Secure TMRC governance approval for Sentiment Analytics E3 deployment",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "critical",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-451",
+        "title": "Secure MRMG production approval for Incident Data Management",
+        "due_at": "2026-08-03T09:00:00+05:30",
+        "priority": "high",
+        "resolved_at": "2026-08-03T09:15:00+05:30"
+      },
+      {
+        "id": "DW-460",
+        "title": "Log formal compliance/privacy review action for GREW colleague attendance data",
+        "due_at": "2026-08-07T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-463",
+        "title": "Follow up with IT Security on GREW launch-pad access approval",
+        "due_at": "2026-08-07T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      }
+    ]
+  },
+  "nishant.kumar": {
+    "tickets": [
+      {
+        "id": "DW-472",
+        "title": "Investigate Kafka consumer lag spike on Incident enrichment service",
+        "due_at": "2026-08-03T12:00:00+05:30",
+        "priority": "high",
+        "resolved_at": "2026-08-03T09:20:00+05:30"
+      },
+      {
+        "id": "DW-580",
+        "title": "Patch GREW ingestion pipeline schema mismatch",
+        "due_at": "2026-08-03T17:00:00+05:30",
+        "priority": "critical",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-581",
+        "title": "Add monitoring and alerting for enrichment pipeline latency and error rate",
+        "due_at": "2026-08-04T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-593",
+        "title": "ROD Alert: Incident enrichment service availability dropped to 95%",
+        "due_at": "2026-08-03T11:00:00+05:30",
+        "priority": "critical",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-594",
+        "title": "Risk_Bus_Oblgr table is not refreshing - investigate ETL job",
+        "due_at": "2026-08-03T16:00:00+05:30",
+        "priority": "high",
+        "resolved_at": null
+      },
+      {
+        "id": "DW-595",
+        "title": "Reminder: service ID certificate expiring soon - renew before expiry",
+        "due_at": "2026-08-07T18:00:00+05:30",
+        "priority": "medium",
+        "resolved_at": null
+      }
+    ]
+  }
+}

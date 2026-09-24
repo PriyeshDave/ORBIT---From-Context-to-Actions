@@ -1,0 +1,65 @@
+{
+  "priyesh.dave": {
+    "mentions": [
+      {
+        "id": "teams-m1",
+        "channel": "Digital Workplace - AI",
+        "from": "Matthew Salomons",
+        "text": "@Priyesh can you share status on the BU onboarding context form before today's TMRC check-in? They specifically asked to see it.",
+        "sent_at": "2026-08-03T08:40:00+05:30",
+        "acknowledged_at": "2026-08-03T17:30:00+05:30"
+      }
+    ],
+    "direct_messages": [
+      {
+        "id": "teams-d1",
+        "from": "Hina Elton",
+        "text": "Ready to run usability testing on the context form as soon as you have a draft - just say the word.",
+        "sent_at": "2026-08-03T08:10:00+05:30",
+        "acknowledged_at": "2026-08-03T13:15:00+05:30"
+      }
+    ]
+  },
+  "hina.elton": {
+    "mentions": [
+      {
+        "id": "teams-hm1",
+        "channel": "Digital Workplace - AI",
+        "from": "Matthew Salomons",
+        "text": "@Hina great research on the confidence-score finding, adding it to the backlog today.",
+        "sent_at": "2026-08-03T10:55:00+05:30",
+        "acknowledged_at": null
+      }
+    ],
+    "direct_messages": [
+      {
+        "id": "teams-hd1",
+        "from": "Priyesh Dave",
+        "text": "Context form draft is ready whenever you want to start usability testing.",
+        "sent_at": "2026-08-03T08:15:00+05:30",
+        "acknowledged_at": "2026-08-03T08:20:00+05:30"
+      }
+    ]
+  },
+  "matthew.salomons": {
+    "mentions": [
+      {
+        "id": "teams-mm1",
+        "channel": "Digital Workplace - AI",
+        "from": "Priyesh Dave",
+        "text": "@Matthew MRMG approval is logged, I'm ready to plan the E3 rollout for Incident Data Management - do you have a preferred week?",
+        "sent_at": "2026-08-03T08:45:00+05:30",
+        "acknowledged_at": null
+      }
+    ],
+    "direct_messages": [
+      {
+        "id": "teams-md1",
+        "from": "Hina Elton",
+        "text": "Sharing the confidence-score UX finding from the 1JS/Sussex House sessions - worth prioritizing for the work note format.",
+        "sent_at": "2026-08-03T08:30:00+05:30",
+        "acknowledged_at": "2026-08-03T10:50:00+05:30"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "critical_notices": [
+    {
+      "id": "notice-1",
+      "subject": "Hydra Cloud outage - partial service disruption",
+      "sender": "Amex IT Infrastructure",
+      "date": "2026-08-03T07:15:00+05:30",
+      "summary": "Hydra Cloud is experiencing a partial outage affecting some internal tools. Engineering is aware and working on a fix. Save work frequently until resolved.",
+      "priority": "Critical",
+      "read": false
+    },
+    {
+      "id": "notice-5",
+      "subject": "MLaaS Decommission - migration to AiDaRT required",
+      "sender": "AiDa Platform Team",
+      "date": "2026-08-02T18:30:00+05:30",
+      "summary": "MLaaS is set to decommission and migrate to AiDaRT. Please plan your migration timeline, or reach out to the AiDa Team for support.",
+      "priority": "Action Required",
+      "read": false
+    },
+    {
+      "id": "notice-2",
+      "subject": "Cornerstone to Lumi migration - action needed",
+      "sender": "Enterprise Learning & Platforms",
+      "date": "2026-08-02T16:00:00+05:30",
+      "summary": "All learning content is migrating from Cornerstone to Lumi over the next two weeks. Bookmark any in-progress courses before August 15 - progress does not carry over automatically.",
+      "priority": "Action Required",
+      "read": false
+    },
+    {
+      "id": "notice-3",
+      "subject": "Share Your Feedback: The Colleague Experience Survey is Now Open",
+      "sender": "ETS India Leadership",
+      "date": "2026-08-01T09:00:00+05:30",
+      "summary": "The Colleague Experience Survey closes this Friday. Takes about 8 minutes - your feedback directly shapes next year's Digital Workplace roadmap.",
+      "priority": "Action Required",
+      "read": true
+    },
+    {
+      "id": "notice-4",
+      "subject": "Annual DR Exercise",
+      "sender": "Enterprise Risk & Resilience",
+      "date": "2026-07-31T11:00:00+05:30",
+      "summary": "DR Planning Validation for CARID 600000999 services: please plan for the annual DR exercise - the deadline to complete validation is 30 Sept.",
+      "priority": "Critical",
+      "read": true
+    }
+  ],
+  "training_events": [
+    {
+      "id": "event-1",
+      "subject": "Training: Agentic AI Fundamentals",
+      "sender": "AI Enablement Team",
+      "date": "2026-08-04T10:00:00+05:30",
+      "summary": "A hands-on session covering agent design patterns, tool use, and multi-agent orchestration - the same concepts behind Orbit. Open to all Digital Workplace colleagues.",
+      "priority": "Recommended",
+      "read": true
+    },
+    {
+      "id": "event-3",
+      "subject": "ETS India Learnings: Session on MCPs",
+      "sender": "ETS India Learning & Development",
+      "date": "2026-08-05T15:30:00+05:30",
+      "summary": "A deep-dive on the Model Context Protocol - how agents securely connect to tools and data. Includes a live walkthrough of a real MCP server.",
+      "priority": "Recommended",
+      "read": false
+    },
+    {
+      "id": "event-2",
+      "subject": "Lumi training: How to deploy on cloud",
+      "sender": "Lumi Platform Team",
+      "date": "2026-08-06T14:00:00+05:30",
+      "summary": "Walkthrough of deploying and registering a trained model to the AiDa model store via Lumi. Recommended if you're training or shipping models this quarter.",
+      "priority": "Recommended",
+      "read": false
+    },
+    {
+      "id": "event-4",
+      "subject": "Brown bag: Prompt engineering for enterprise use cases",
+      "sender": "AI Enablement Team",
+      "date": "2026-08-08T13:00:00+05:30",
+      "summary": "Practical prompt-design patterns for production LLM features, with examples drawn from live Digital Workplace projects.",
+      "priority": "Optional",
+      "read": false
+    },
+    {
+      "id": "event-5",
+      "subject": "Lunch & Learn: Building your first AI agent",
+      "sender": "AI Enablement Team",
+      "date": "2026-08-11T12:30:00+05:30",
+      "summary": "An informal, code-along session for building a simple single-purpose agent from scratch. No prior AI experience needed.",
+      "priority": "Optional",
+      "read": true
+    }
+  ]
+}

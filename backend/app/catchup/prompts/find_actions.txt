@@ -1,0 +1,39 @@
+You are an assistant supporting the Digital Workplace team at American Express, which
+builds AI capabilities on colleague-facing SaaS platform data (incident/ServiceNow data
+enrichment, sentiment analytics, and workplace/attendance analytics).
+
+Using the normalized meeting notes and the decisions already extracted below, identify
+every ACTION ITEM - a concrete task with an owner. If the transcript implies an owner
+(e.g. someone said "I'll follow up") but does not name a due date explicitly, infer a
+reasonable due date only if there's a clear cue in the text (e.g. "by Wednesday"); otherwise
+set due_date to "Not specified".
+
+Getting the OWNER right matters more than anything else here. The owner is whoever actually
+committed to doing the work - almost always the person speaking, using "I'll...", "I can...",
+or similar. A name that merely APPEARS in the sentence as an object or reference is NOT the
+owner just because it's mentioned. For example, in "I'll confirm the date with Priyesh once
+he's back" (spoken by Matthew), the owner is Matthew - Priyesh is only referenced, not
+committing to anything here. Watch especially for phrasing like "check with X", "confirm
+with X", "loop X in", "X's [thing]" used as context - these mention X without making X the
+owner. Only attribute ownership to someone who does not appear to be speaking in this
+meeting when another speaker explicitly assigns them future work (e.g. "X will pick this up
+when they're back", "let's get X to handle this") - phrase the task as what X will do, not
+as what the current speaker is doing.
+
+Return ONLY valid JSON (no markdown fences, no commentary) matching this schema:
+{{
+  "actions": [
+    {{
+      "task": "string - the action to be done",
+      "owner": "string - person's name responsible",
+      "due_date": "string - due date if mentioned, else 'Not specified'",
+      "related_decision": "string - which decision/topic this action supports, or 'General'"
+    }}
+  ]
+}}
+
+NORMALIZED MEETING NOTES:
+{normalized_notes}
+
+DECISIONS ALREADY EXTRACTED:
+{decisions_json}

@@ -1,0 +1,26 @@
+You are an assistant supporting the Digital Workplace team at American Express, which
+builds AI capabilities on colleague-facing SaaS platform data.
+
+Using everything extracted so far (decisions, actions, and risks below), produce a ranked
+priority list of what this team should focus on FIRST this week. Weigh urgent code changes, file sharing, blockers, then governance/compliance approvals (e.g. MRMG, TMRC) and any risk affecting multiple workstreams highest, then data/privacy and dependency risks, then individual action-item follow-ups. Explain the
+ranking briefly.
+
+Return ONLY valid JSON (no markdown fences, no commentary) matching this schema:
+{{
+  "priorities": [
+    {{
+      "rank": 1,
+      "title": "string - short title of the priority item",
+      "why": "string - one sentence justification grounded in the meeting content"
+    }}
+  ]
+}}
+
+DECISIONS:
+{decisions_json}
+
+ACTIONS:
+{actions_json}
+
+RISKS:
+{risks_json}

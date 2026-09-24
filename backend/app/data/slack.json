@@ -1,0 +1,82 @@
+{
+  "priyesh.dave": {
+    "channel_messages": [
+      {
+        "id": "slack-1",
+        "channel": "#digital-workplace-engineering",
+        "from": "Nishant Kumar",
+        "text": "Kafka consumer lag alert fired again this morning on the enrichment service - investigating, will update.",
+        "sent_at": "2026-08-03T08:50:00+05:30",
+        "acknowledged_at": "2026-08-03T09:20:00+05:30"
+      },
+      {
+        "id": "slack-2",
+        "channel": "#digital-workplace-engineering",
+        "from": "Isha Dave",
+        "text": "Incident enrichment-accuracy dashboard is live if you want to check categorization trends over the last two weeks.",
+        "sent_at": "2026-08-02T17:30:00+05:30",
+        "acknowledged_at": null
+      }
+    ]
+  },
+  "parth.joshi": {
+    "channel_messages": [
+      {
+        "id": "slack-p1",
+        "channel": "#digital-workplace-engineering",
+        "from": "Isha Dave",
+        "text": "Sentiment survey results dashboard is up if it's useful for validating your clustering.",
+        "sent_at": "2026-08-03T09:00:00+05:30",
+        "acknowledged_at": "2026-08-03T13:10:00+05:30"
+      },
+      {
+        "id": "slack-p2",
+        "channel": "#digital-workplace-engineering",
+        "from": "Matthew Salomons",
+        "text": "TMRC wants to see the BU onboarding context form before sign-off - Priyesh is finishing it up today.",
+        "sent_at": "2026-08-03T08:42:00+05:30",
+        "acknowledged_at": null
+      }
+    ]
+  },
+  "matthew.salomons": {
+    "channel_messages": [
+      {
+        "id": "slack-m1",
+        "channel": "#digital-workplace-engineering",
+        "from": "Nishant Kumar",
+        "text": "GREW ingestion had a partial failure overnight - schema mismatch on one source feed, patch going in today.",
+        "sent_at": "2026-08-03T08:55:00+05:30",
+        "acknowledged_at": "2026-08-03T09:30:00+05:30"
+      },
+      {
+        "id": "slack-m2",
+        "channel": "#digital-workplace-engineering",
+        "from": "Isha Dave",
+        "text": "Sentiment leadership dashboard is ready for your 2pm readout.",
+        "sent_at": "2026-08-03T09:10:00+05:30",
+        "acknowledged_at": "2026-08-03T09:12:00+05:30"
+      }
+    ]
+  },
+  "nishant.kumar": {
+    "channel_messages": [
+      {
+        "id": "slack-n1",
+        "channel": "#digital-workplace-engineering",
+        "from": "Priyesh Dave",
+        "text": "Categorization service looking stable today - thanks for the alerting fix.",
+        "sent_at": "2026-08-03T09:25:00+05:30",
+        "acknowledged_at": null
+      },
+      {
+        "id": "slack-n2",
+        "channel": "#digital-workplace-engineering",
+        "from": "Isha Dave",
+        "text": "GREW dashboard refresh will lag a bit while your ingestion patch validates - will ping you once it's caught up.",
+        "sent_at": "2026-08-03T09:05:00+05:30",
+        "acknowledged_at": "2026-08-03T09:07:00+05:30"
+      }
+    ]
+  }
+}

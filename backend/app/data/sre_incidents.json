@@ -1,0 +1,466 @@
+{
+  "nishant.kumar": {
+    "incidents": [
+      {
+        "id": "INC0198231",
+        "title": "API Gateway latency spike on TechCare chatbot intake",
+        "category": "Performance",
+        "severity": "high",
+        "created_at": "2026-07-28T09:15:00+05:30",
+        "resolved_at": "2026-07-28T12:05:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "Multiple colleagues reported the TechCare chatbot hanging for 8-12 seconds before responding. No error shown to the colleague, just a long wait.",
+        "enrichment": {
+          "summary": "API Gateway sitting in front of the TechCare chatbot intake is queuing requests during a traffic spike, adding 8-12s of latency before the request reaches the enrichment pipeline. No requests are being dropped, only delayed.",
+          "probable_root_cause": "Gateway connection pool sized for baseline traffic; a promotional Digital Workplace town hall drove a 3x spike in chatbot sessions, exhausting available connections.",
+          "predicted_category": "Performance",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198244",
+        "title": "SSL handshake failures on Nexthink data pull",
+        "category": "Connectivity",
+        "severity": "medium",
+        "created_at": "2026-07-28T10:40:00+05:30",
+        "resolved_at": "2026-07-28T14:55:00+05:30",
+        "pre_enriched": true,
+        "priority": "P3",
+        "incident_description": "Nexthink data pull job failing intermittently with connection errors in the job log. Some colleague device KPI records missing from the last two sync windows.",
+        "enrichment": {
+          "summary": "TLS handshake between the Nexthink SOR connector and our ingestion service is failing for roughly 1 in 6 requests, causing partial device-KPI sync failures rather than a full outage.",
+          "probable_root_cause": "A certificate rotation on the Nexthink SOR side was not mirrored in our connector's trust store in time, causing intermittent handshake failures until the new cert was picked up.",
+          "predicted_category": "Connectivity",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198259",
+        "title": "Elastic cluster node degraded - Colleague 360 space",
+        "category": "Infrastructure",
+        "severity": "high",
+        "created_at": "2026-07-28T13:20:00+05:30",
+        "resolved_at": "2026-07-28T18:00:00+05:30",
+        "pre_enriched": false,
+        "priority": "P2",
+        "incident_description": "Elastic cluster showing one node in yellow health status. Query latency on Colleague 360 indices increased noticeably.",
+        "enrichment": null
+      },
+      {
+        "id": "INC0198301",
+        "title": "Enrichment Service (GPT-4.1) rate limit errors during batch spike",
+        "category": "Performance",
+        "severity": "critical",
+        "created_at": "2026-07-29T08:50:00+05:30",
+        "resolved_at": "2026-07-29T11:30:00+05:30",
+        "pre_enriched": true,
+        "priority": "P1",
+        "incident_description": "Enrichment Service returning 429 (rate limited) responses for a sustained 25-minute window. Incidents queued during this time are missing their AI-generated work note summary.",
+        "enrichment": {
+          "summary": "The Enrichment Service (GPT-4.1) hit its provider-side rate limit during a Kafka batch replay after a downstream outage, causing a backlog of unsummarized incidents.",
+          "probable_root_cause": "A batch replay job re-processed 40 minutes of backlogged incidents in a single burst instead of throttling to the service's steady-state rate limit.",
+          "predicted_category": "Performance",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198318",
+        "title": "Audit log write failures - Elastic audit DB",
+        "category": "Data Integrity",
+        "severity": "high",
+        "created_at": "2026-07-29T11:10:00+05:30",
+        "resolved_at": "2026-07-29T15:45:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "Audit pipeline job logs show repeated write failures to the Elastic audit DB. Enrichment itself is unaffected, but audit trail has gaps for the affected window.",
+        "enrichment": {
+          "summary": "Write failures to the Elastic audit DB are isolated to the audit-logging path - the enrichment and categorization pipeline completed successfully for all affected incidents, only the audit trail is incomplete.",
+          "probable_root_cause": "The audit DB index rolled over to a new daily index at the same moment as a scheduled snapshot, briefly rejecting writes during the handoff.",
+          "predicted_category": "Data Integrity",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198327",
+        "title": "Load balancer health check flapping - enrichment service pods",
+        "category": "Infrastructure",
+        "severity": "medium",
+        "created_at": "2026-07-29T14:30:00+05:30",
+        "resolved_at": "2026-07-29T19:10:00+05:30",
+        "pre_enriched": false,
+        "priority": "P3",
+        "incident_description": "Load balancer dashboard shows enrichment service pods flapping between healthy and unhealthy every 30-60 seconds without a clear trigger.",
+        "enrichment": null
+      },
+      {
+        "id": "INC0198340",
+        "title": "Batch job stuck in queue - Kafka consumer group rebalance",
+        "category": "Data Pipeline",
+        "severity": "medium",
+        "created_at": "2026-07-29T17:00:00+05:30",
+        "resolved_at": "2026-07-30T08:15:00+05:30",
+        "pre_enriched": true,
+        "priority": "P3",
+        "incident_description": "A batch of roughly 60 incidents has been sitting in the Kafka queue for over 40 minutes without being picked up for enrichment.",
+        "enrichment": {
+          "summary": "The Kafka consumer group serving the enrichment service is stuck mid-rebalance after a pod restart, so no consumer currently holds a partition assignment for the backlog.",
+          "probable_root_cause": "A rolling deployment restarted all consumer pods within the same rebalance window, so the group never converged on a stable partition assignment.",
+          "predicted_category": "Data Pipeline",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198366",
+        "title": "ServiceNow webhook timeout writing enriched work notes",
+        "category": "Connectivity",
+        "severity": "high",
+        "created_at": "2026-07-30T09:05:00+05:30",
+        "resolved_at": "2026-07-30T11:50:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "ServiceNow shows several tickets where the enriched work note never appeared, even though our internal logs show enrichment completed successfully.",
+        "enrichment": {
+          "summary": "The enrichment pipeline is completing its work, but the outbound webhook call to ServiceNow to attach the work note is timing out before ServiceNow acknowledges receipt.",
+          "probable_root_cause": "ServiceNow's webhook endpoint response time briefly exceeded our 5-second timeout during their own maintenance window, causing the write to be dropped rather than retried.",
+          "predicted_category": "Connectivity",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198379",
+        "title": "Categorization Service pod memory leak",
+        "category": "Performance",
+        "severity": "high",
+        "created_at": "2026-07-30T12:15:00+05:30",
+        "resolved_at": "2026-07-30T15:20:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "Categorization Service pods showing steadily climbing memory usage over several hours, eventually triggering an OOM restart.",
+        "enrichment": {
+          "summary": "Categorization Service pod memory grows roughly linearly with uptime, consistent with a leak rather than load-driven usage - restarts temporarily resolve it.",
+          "probable_root_cause": "The RAG service's embedding cache for historic incidents is not evicting old entries, so memory grows unbounded the longer a pod stays up.",
+          "predicted_category": "Performance",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198402",
+        "title": "Colleague 360 API returning intermittent 5xx errors",
+        "category": "Connectivity",
+        "severity": "critical",
+        "created_at": "2026-07-31T08:30:00+05:30",
+        "resolved_at": "2026-07-31T10:40:00+05:30",
+        "pre_enriched": true,
+        "priority": "P1",
+        "incident_description": "Colleague 360 API consumers (including the GREW dashboard and the enrichment pipeline) are seeing intermittent 500 and 503 responses.",
+        "enrichment": {
+          "summary": "Colleague 360 API is returning 5xx errors on roughly 8% of requests, concentrated on endpoints that join attendance and device-KPI data - consistent with a downstream dependency issue rather than the API itself being down.",
+          "probable_root_cause": "A downstream Elastic query used by the joined-data endpoint is timing out under load, and the API is surfacing that as a generic 5xx instead of a scoped error.",
+          "predicted_category": "Connectivity",
+          "similar_incidents": [
+            {
+              "id": "INC0198366",
+              "note": "Same downstream-timeout signature - previously resolved by raising the webhook/API timeout threshold during peak load."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198415",
+        "title": "Disk space warning on Elastic audit DB node",
+        "category": "Infrastructure",
+        "severity": "medium",
+        "created_at": "2026-07-31T10:55:00+05:30",
+        "resolved_at": "2026-07-31T13:10:00+05:30",
+        "pre_enriched": true,
+        "priority": "P3",
+        "incident_description": "Monitoring shows the Elastic audit DB node crossing 85% disk utilization, trending upward.",
+        "enrichment": {
+          "summary": "Disk usage on the audit DB node is climbing faster than expected given current incident volume, suggesting an indexing or retention setting change rather than genuine growth in audit data.",
+          "probable_root_cause": "A retention policy change that was meant to reduce index lifecycle to 30 days did not apply correctly, so audit indices are not being pruned on schedule.",
+          "predicted_category": "Infrastructure",
+          "similar_incidents": [
+            {
+              "id": "INC0198318",
+              "note": "Same audit DB node - different symptom (disk usage vs write failures), worth checking if a shared retention/indexing change is the common thread."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198428",
+        "title": "Kafka consumer lag spike on Incident enrichment service",
+        "category": "Data Pipeline",
+        "severity": "high",
+        "created_at": "2026-07-31T13:45:00+05:30",
+        "resolved_at": "2026-07-31T15:30:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "Kafka consumer lag metric for the enrichment service climbed sharply and stayed elevated for roughly 90 minutes.",
+        "enrichment": {
+          "summary": "Consumer lag on the enrichment service's Kafka topic spiked well above baseline, meaning newly created incidents were waiting longer than usual before their AI enrichment began.",
+          "probable_root_cause": "A downstream Nexthink API slowdown caused each enrichment call to take 3-4x longer than normal, backing up the consumer even though no messages were lost.",
+          "predicted_category": "Data Pipeline",
+          "similar_incidents": [
+            {
+              "id": "INC0198340",
+              "note": "Same Kafka consumer group instability - that incident was resolved by staggering the rolling deployment to avoid a full-group rebalance."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198441",
+        "title": "Nexthink hardware KPI summary incomplete for a subset of devices",
+        "category": "Data Integrity",
+        "severity": "medium",
+        "created_at": "2026-07-31T16:00:00+05:30",
+        "resolved_at": "2026-07-31T18:35:00+05:30",
+        "pre_enriched": false,
+        "priority": "P3",
+        "incident_description": "A subset of enriched work notes are missing hardware KPI fields (CPU, memory) even though the software KPI fields are populated correctly.",
+        "enrichment": null
+      },
+      {
+        "id": "INC0198450",
+        "title": "GREW ingestion pipeline - source feed connection drop",
+        "category": "Data Pipeline",
+        "severity": "medium",
+        "created_at": "2026-07-31T18:50:00+05:30",
+        "resolved_at": null,
+        "pre_enriched": true,
+        "priority": "P3",
+        "incident_description": "GREW ingestion pipeline dashboard shows the source feed connection dropping and reconnecting every few minutes overnight, resulting in a partial data load.",
+        "enrichment": {
+          "summary": "The GREW ingestion job's connection to its upstream badge-swipe source feed is unstable overnight, causing partial batches rather than a clean full-day load.",
+          "probable_root_cause": "A network ACL change on the source feed's side appears to be intermittently blocking the ingestion job's IP range during off-peak maintenance windows.",
+          "predicted_category": "Data Pipeline",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198477",
+        "title": "Enrichment Service p99 latency above SLA threshold",
+        "category": "Performance",
+        "severity": "high",
+        "created_at": "2026-08-01T09:00:00+05:30",
+        "resolved_at": "2026-08-01T10:50:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "Enrichment Service p99 latency dashboard crossed the internal SLA threshold (2s) for a sustained period during business hours.",
+        "enrichment": {
+          "summary": "p99 latency on the Enrichment Service is elevated specifically during the 9-11am window, correlating with the highest hourly volume of incoming incidents.",
+          "probable_root_cause": "Current pod autoscaling threshold reacts to CPU usage, which lags behind the actual request-queue depth, so scale-out happens a few minutes after latency has already degraded.",
+          "predicted_category": "Performance",
+          "similar_incidents": [
+            {
+              "id": "INC0198231",
+              "note": "Same latency-under-load pattern - that time the fix was switching autoscaling from CPU-based to queue-depth-based triggers."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198489",
+        "title": "ServiceNow assignment-group routing misconfiguration (1JS)",
+        "category": "Configuration",
+        "severity": "medium",
+        "created_at": "2026-08-01T11:20:00+05:30",
+        "resolved_at": "2026-08-01T12:45:00+05:30",
+        "pre_enriched": false,
+        "priority": "P3",
+        "incident_description": "Several 1JS-assigned incidents were enriched correctly but routed to the wrong ServiceNow assignment group.",
+        "enrichment": null
+      },
+      {
+        "id": "INC0198498",
+        "title": "Categorization RAG index stale - historic incidents not syncing",
+        "category": "Data Integrity",
+        "severity": "high",
+        "created_at": "2026-08-01T14:00:00+05:30",
+        "resolved_at": "2026-08-01T15:20:00+05:30",
+        "pre_enriched": true,
+        "priority": "P2",
+        "incident_description": "Service engineers in 1JS reported that recently categorized incidents are being tagged with categories that don't match similar historic incidents.",
+        "enrichment": {
+          "summary": "The Categorization Service's RAG index of historic categorized incidents hasn't picked up incidents from the last several days, so its category suggestions are drifting from recent precedent.",
+          "probable_root_cause": "The scheduled job that syncs newly-resolved incidents into the RAG index silently stopped running after a permissions change on the source index three days ago.",
+          "predicted_category": "Data Integrity",
+          "similar_incidents": null
+        }
+      },
+      {
+        "id": "INC0198512",
+        "title": "Scheduled Nexthink sync job failed silently overnight",
+        "category": "Data Pipeline",
+        "severity": "medium",
+        "created_at": "2026-08-02T07:30:00+05:30",
+        "resolved_at": "2026-08-02T09:10:00+05:30",
+        "pre_enriched": true,
+        "priority": "P3",
+        "incident_description": "Morning check found no new Nexthink device KPI records from the overnight scheduled sync, though the job showed as 'completed' in the scheduler.",
+        "enrichment": {
+          "summary": "The scheduled overnight Nexthink sync job reported success but wrote zero records - consistent with the job connecting successfully but the query returning an empty result set unexpectedly.",
+          "probable_root_cause": "A timezone handling bug in the sync job's date-range filter caused it to query a window that had already been synced, returning no new rows without raising an error.",
+          "predicted_category": "Data Pipeline",
+          "similar_incidents": [
+            {
+              "id": "INC0198244",
+              "note": "Same Nexthink connector instability pattern - that time it traced back to a certificate rotation mismatch."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198540",
+        "title": "Kafka consumer lag spike on Incident enrichment service",
+        "category": "Data Pipeline",
+        "severity": "high",
+        "created_at": "2026-08-03T08:40:00+05:30",
+        "resolved_at": "2026-08-03T09:20:00+05:30",
+        "pre_enriched": true,
+        "linked_ticket": "DW-472",
+        "priority": "P2",
+        "incident_description": "Kafka consumer lag alert fired again this morning for the enrichment service, similar to the pattern seen on Jul 31.",
+        "enrichment": {
+          "summary": "Same signature as the Jul 31 lag spike - consumer lag rising in the enrichment service's Kafka topic during a period of higher-than-usual incident volume.",
+          "probable_root_cause": "Enrichment Service pod count did not scale up ahead of the volume increase; the added alerting caught it faster this time but the underlying autoscaling lag remains unresolved.",
+          "predicted_category": "Data Pipeline",
+          "similar_incidents": [
+            {
+              "id": "INC0198428",
+              "note": "Identical lag signature to the Jul 31 spike - same root cause (pod count not scaling ahead of volume increase)."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198551",
+        "title": "ROD Alert: Incident enrichment service availability dropped to 95%",
+        "category": "Availability",
+        "severity": "critical",
+        "created_at": "2026-08-03T10:30:00+05:30",
+        "resolved_at": null,
+        "pre_enriched": true,
+        "linked_ticket": "DW-593",
+        "priority": "P1",
+        "incident_description": "Availability monitoring shows the Incident enrichment service dropping to 95% availability over the last hour, below the 99.5% target.",
+        "enrichment": {
+          "summary": "Enrichment service availability dipped due to a cluster of pod restarts correlated with the same memory-leak pattern seen in the Categorization Service pod incident earlier this week.",
+          "probable_root_cause": "Recurrence of the RAG embedding-cache memory leak (see INC0198379) - a permanent fix (bounded cache eviction) has not yet been deployed, only pod restarts as a stopgap.",
+          "predicted_category": "Availability",
+          "similar_incidents": [
+            {
+              "id": "INC0198379",
+              "note": "Same RAG embedding-cache memory leak - the previous fix was only a pod restart, so a permanent bounded-cache fix is still outstanding."
+            }
+          ]
+        }
+      },
+      {
+        "id": "INC0198558",
+        "title": "Risk_Bus_Oblgr table is not refreshing",
+        "category": "Data Integrity",
+        "severity": "high",
+        "created_at": "2026-08-03T11:15:00+05:30",
+        "resolved_at": null,
+        "pre_enriched": false,
+        "linked_ticket": "DW-594",
+        "priority": "P2",
+        "incident_description": "Risk_Bus_Oblgr reporting table has not refreshed in the scheduled window; downstream reports are showing stale data.",
+        "enrichment": null
+      },
+      {
+        "id": "INC0198563",
+        "title": "GREW ingestion pipeline schema mismatch",
+        "category": "Data Pipeline",
+        "severity": "critical",
+        "created_at": "2026-08-03T08:55:00+05:30",
+        "resolved_at": null,
+        "pre_enriched": true,
+        "linked_ticket": "DW-580",
+        "priority": "P1",
+        "incident_description": "GREW ingestion pipeline failing on every run since this morning with a schema validation error on one of the source fields.",
+        "enrichment": {
+          "summary": "The GREW ingestion job is rejecting every incoming batch due to a schema mismatch on a single field, consistent with an upstream source system changing its field format without notice.",
+          "probable_root_cause": "The upstream badge-swipe source system changed a timestamp field from Unix epoch to ISO 8601 format in its latest release, which the ingestion job's schema validator does not yet accept.",
+          "predicted_category": "Data Pipeline",
+          "similar_incidents": [
+            {
+              "id": "INC0198450",
+              "note": "Same GREW ingestion pipeline instability - that time it was a network ACL blocking the source feed."
+            }
+          ]
+        }
+      }
+    ],
+    "daily_stats": [
+      {
+        "date": "2026-07-28",
+        "created": 3,
+        "resolved": 3,
+        "pending_eod": 0,
+        "avg_resolution_hours": 3.9
+      },
+      {
+        "date": "2026-07-29",
+        "created": 4,
+        "resolved": 3,
+        "pending_eod": 1,
+        "avg_resolution_hours": 4.0
+      },
+      {
+        "date": "2026-07-30",
+        "created": 2,
+        "resolved": 3,
+        "pending_eod": 0,
+        "avg_resolution_hours": 7.0
+      },
+      {
+        "date": "2026-07-31",
+        "created": 5,
+        "resolved": 4,
+        "pending_eod": 1,
+        "avg_resolution_hours": 2.2
+      },
+      {
+        "date": "2026-08-01",
+        "created": 3,
+        "resolved": 3,
+        "pending_eod": 1,
+        "avg_resolution_hours": 1.5
+      },
+      {
+        "date": "2026-08-02",
+        "created": 1,
+        "resolved": 1,
+        "pending_eod": 1,
+        "avg_resolution_hours": 1.7
+      },
+      {
+        "date": "2026-08-03",
+        "created": 4,
+        "resolved": 1,
+        "pending_eod": 4,
+        "avg_resolution_hours": 0.7
+      }
+    ],
+    "category_benchmark_hours": {
+      "Performance": 3.5,
+      "Connectivity": 3.2,
+      "Data Integrity": 3.8,
+      "Data Pipeline": 3.6,
+      "Infrastructure": 3.0,
+      "Configuration": 2.5,
+      "Availability": 3.0
+    },
+    "team_benchmark": {
+      "team_size": 5,
+      "nishant_rank": 2,
+      "percentile": 80,
+      "resolved_vs_team_median_pct": 15,
+      "trend": "up"
+    }
+  }
+}
